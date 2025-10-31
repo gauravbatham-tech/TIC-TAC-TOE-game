@@ -1,5 +1,4 @@
 # 🎮 Tic-Tac-Toe Web Application
-## Task 01 - Prodigy Infotech Internship
 This project is an advanced Tic-Tac-Toe Web Application developed using HTML, CSS, and JavaScript as part of my internship at Prodigy Infotech.
 It features interactive gameplay, modern UI design, and options to play against another player or an AI opponent.
 
@@ -29,4 +28,5 @@ TicTacToe/
 ├── style.css      # Styling and animations
 ├── script.js      # Game logic & functionality
 └── README.md      # Project documentation
+
 
