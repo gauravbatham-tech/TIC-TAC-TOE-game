@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe — Pro Analysis</title>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Left Analysis Panel -->
+    <aside class="panel left-panel">
+      <h2>Game Analysis</h2>
+
+      <section class="panel-section">
+        <h3>Move History</h3>
+        <ol id="move-history" class="move-list"></ol>
+      </section>
+
+      <section class="panel-section">
+        <h3>Win Probability (Live)</h3>
+        <canvas id="probChart" width="200" height="200"></canvas>
+        <div id="prob-text" class="prob-text">X: 33% • O: 33% • Draw: 34%</div>
+      </section>
+    </aside>
+
+    <!-- Center Game Area -->
+    <main class="center-area">
+      <h1>🎯 Tic-Tac-Toe</h1>
+
+      <div class="mode-select">
+        <button id="pvp" class="mode-btn">👥 Player vs Player</button>
+        <button id="ai" class="mode-btn">🤖 Player vs Computer</button>
+      </div>
+
+      <div id="game" class="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+
+      <p id="status" class="status">Choose a mode to start</p>
+
+      <div class="controls">
+        <button id="restart" class="control-btn">🔄 Restart</button>
+        <button id="next-round" class="control-btn">⏭️ New Round</button>
+      </div>
+    </main>
+
+    <!-- Right Analysis Panel -->
+    <aside class="panel right-panel">
+      <h2>Match Summary</h2>
+
+      <section class="panel-section">
+        <h3>Scoreboard</h3>
+        <div class="scoreboard">
+          <div class="score-item">X: <span id="score-x">0</span></div>
+          <div class="score-item">O: <span id="score-o">0</span></div>
+          <div class="score-item">Draws: <span id="score-d">0</span></div>
+        </div>
+        <canvas id="scoreChart" width="260" height="120"></canvas>
+      </section>
+
+      <section class="panel-section">
+        <h3>Strategy Tips</h3>
+        <div id="strategy" class="strategy">
+          Start a game — tips will appear live here.
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
